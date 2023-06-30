@@ -5,8 +5,11 @@ A function that returns a pascal triangle of n
 
 
 def pascal_triangle(n):
+    '''Creates a list of lists of integers representing
+    the Pascal's triangle of a given integer.
+    '''
     if n <= 0:
-        return ([])
+        return []
     p_list = [[1]]
     temp = []
     for i in range(n - 1):
@@ -17,4 +20,4 @@ def pascal_triangle(n):
         temp.append(1)
         p_list.append(temp)
         temp = []
-    return (p_list)
+    return p_list
