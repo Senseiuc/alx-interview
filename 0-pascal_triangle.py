@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 A function that returns a pascal triangle of n
 """
