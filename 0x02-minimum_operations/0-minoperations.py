@@ -3,6 +3,7 @@
 Task 0: minimum operations
 """
 
+
 def minOperations(n):
     """
     a method that calculates the fewest number
