@@ -14,13 +14,10 @@ def minOperations(n):
         return 0
     hCf = h_c_f(n)
     max_op = n // hCf
-    if hCf == 1:
-        return n
-    else:
-        while hCf != 1:
-            x = h_c_f(hCf)
-            max_op += hCf // x
-            hCf = x
+    while hCf != 1:
+        x = h_c_f(hCf)
+        max_op += hCf // x
+        hCf = x
     return max_op
 
 
