@@ -10,6 +10,8 @@ def minOperations(n):
     of operations needed to result in exactly
     n H characters in the file
     """
+    if type(n) != int or n <= 0:
+        return 0
     hCf = h_c_f(n)
     max_op = n // hCf
     if hCf == 1:
