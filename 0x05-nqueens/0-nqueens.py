@@ -28,7 +28,7 @@ def get_input():
         sys.exit(1)
     try:
         n = int(sys.argv[1])
-    except Exception:
+    except ValueError:
         print("N must be a number")
         sys.exit(1)
     if n < 4:
