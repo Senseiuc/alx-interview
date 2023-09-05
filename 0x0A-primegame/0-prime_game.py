@@ -13,17 +13,14 @@ def prime_count(num):
         return count
     if num == 2:
         return 1
-    numbs = [i for i in range(2, num + 1)]
-    for i in numbs:
-        is_prime = True
-        for j in range(2, i // 2):
-            if i % j == 0:
-                is_prime = False
-                break
-        if is_prime:
-            count += 1
-            numbs = [k for k in numbs if k % i != 0]
-    return count
+    is_prime = [True] * (num + 1)
+    p = 2
+    while p * p <= num:
+        if is_prime[p]:
+            for i in range(p * p, num + 1, p):
+                is_prime[i] = False
+        p += 1
+    return len([i for i in range(2, num + 1) if is_prime[i]])
 
 
 def isWinner(x, nums):
