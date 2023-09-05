@@ -16,7 +16,7 @@ def prime_count(num):
     numbs = [i for i in range(2, num + 1)]
     for i in numbs:
         is_prime = True
-        for j in range(2, i):
+        for j in range(2, i // 2):
             if i % j == 0:
                 is_prime = False
                 break
@@ -44,8 +44,3 @@ def isWinner(x, nums):
     elif jane > ben:
         return 'Maria'
     return None
-
-
-# print(isWinner(100, [i for i in range(1, 101)]))
-# print(isWinner(3, [4, 5, 1]))
-# print(isWinner(2, [3, 5]))
